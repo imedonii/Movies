@@ -43,9 +43,12 @@ overlay.addEventListener('click', () => {
     overlay.classList.add('hidden');
 })
 
-// const mov = document.querySelectorAll('.mv');
 
-// m1.addEventListener('click', () => {
-//     mov[0].classList.remove('hidden');
-//     overlay.classList.remove('hidden');
-// })
+document.querySelector('.pickRandom').addEventListener('click', () => {
+    let no = Math.trunc(Math.random() * 5) + 1;
+    let movieRandom = `.m${no}`;
+    console.log(movieRandom);
+    document.querySelector(`.movie-${no}`).classList.remove('hidden');
+    removed();
+})
+
